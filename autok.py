@@ -82,9 +82,30 @@ def otodik(adatok):
     print('A járművek:', rendszamok)
 
 
+def hatodik_tavolas(time, speed):
+    return
+
+
+def hatodik(adatok):
+    print('6. feladat:')
+    rendszam = input('Kérem adjon meg egy rendszámot: ')
+    ido = []
+
+    for elem in adatok:
+        if elem[0] == rendszam:
+            ido.append((int(elem[1]) * 60) + int(elem[2]))
+            eltelt_ido = ido[-1] - ido[0] # itt valami nem jó
+            km = hatodik_tavolas(eltelt_ido, elem[3])
+
+            print(ido)
+
+            print(elem[1] + ':' + elem[2], str(km) + 'km')
+
+
 data = adattarolas()
 
 masodik(data)
 harmadik(data)
-negyedik(data)
+# negyedik(data)
 otodik(data)
+hatodik(data)
